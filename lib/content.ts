@@ -558,3 +558,51 @@ export const botScript: BotMessage[] = [
     hora: "22:48",
   },
 ];
+
+/* ── Página Contato — PRD §5.5 ───────────────────────────── */
+
+export const assuntosContato = [
+  { value: "agendar", label: "Agendar consulta ou exame" },
+  { value: "resultado", label: "Resultado de exame" },
+  { value: "convenios", label: "Convênios" },
+  { value: "outro", label: "Outro assunto" },
+];
+
+export type EtapaFluxo = {
+  label: string;
+  descricao: string;
+};
+
+/** Etapas da animação de fluxo pós-envio do formulário */
+export const fluxoContato: EtapaFluxo[] = [
+  {
+    label: "Recebido",
+    descricao: "Sua mensagem chegou. Nada se perde por aqui.",
+  },
+  {
+    label: "Triagem automática",
+    descricao: "O assunto foi identificado e encaminhado para a pessoa certa.",
+  },
+  {
+    label: "Na fila da equipe",
+    descricao: "Alguém da recepção já vai te responder.",
+  },
+];
+
+export const faqContato: FaqItem[] = [
+  {
+    pergunta: "Em quanto tempo vocês respondem?",
+    resposta:
+      "Em até 2 horas dentro do horário de atendimento. Fora dele, o assistente do WhatsApp responde na hora e a equipe assume assim que a clínica abre — sua mensagem nunca fica sem dono.",
+  },
+  {
+    pergunta: "O bot do WhatsApp funciona mesmo de madrugada?",
+    resposta:
+      "Funciona, 24 horas. Ele agenda, remarca e informa resultados a qualquer hora. Se o assunto precisar de uma pessoa, ele registra tudo e a equipe continua a conversa no dia seguinte, sem você repetir nada.",
+  },
+  {
+    pergunta: "Prefiro ligar. Tem problema?",
+    resposta:
+      "Nenhum. O telefone atende de segunda a sexta, das 7h às 19h, e sábado até 13h. Se a linha estiver ocupada, deixe seu número no formulário que a gente retorna.",
+  },
+];
