@@ -460,6 +460,8 @@ export type Post = {
   data: string;
   /** Tempo de leitura em minutos */
   leitura: number;
+  /** Capa em public/images */
+  imagem: string;
 };
 
 export const posts: Post[] = [
@@ -472,6 +474,7 @@ export const posts: Post[] = [
     autor: "Dra. Helena Duarte",
     data: "2026-06-30",
     leitura: 4,
+    imagem: "/images/blog-lembrete.jpg",
   },
   {
     slug: "check-up-anual-o-que-entra",
@@ -482,6 +485,7 @@ export const posts: Post[] = [
     autor: "Dr. Caio Monteiro",
     data: "2026-06-12",
     leitura: 5,
+    imagem: "/images/blog-checkup.jpg",
   },
   {
     slug: "dor-de-cabeca-quando-procurar-medico",
@@ -492,6 +496,7 @@ export const posts: Post[] = [
     autor: "Dra. Helena Duarte",
     data: "2026-05-28",
     leitura: 4,
+    imagem: "/images/blog-dor-de-cabeca.jpg",
   },
   {
     slug: "a-jornada-do-resultado",
@@ -502,6 +507,7 @@ export const posts: Post[] = [
     autor: "Dra. Marina Costa",
     data: "2026-05-09",
     leitura: 4,
+    imagem: "/images/blog-resultado.jpg",
   },
   {
     slug: "ansiedade-nao-e-frescura",
@@ -512,6 +518,7 @@ export const posts: Post[] = [
     autor: "Dr. Rafael Nogueira",
     data: "2026-04-22",
     leitura: 5,
+    imagem: "/images/blog-ansiedade.jpg",
   },
   {
     slug: "vacinas-de-adulto",
@@ -522,6 +529,7 @@ export const posts: Post[] = [
     autor: "Dra. Lívia Rocha",
     data: "2026-04-03",
     leitura: 4,
+    imagem: "/images/blog-vacinas.jpg",
   },
 ];
 

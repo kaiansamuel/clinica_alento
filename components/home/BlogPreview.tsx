@@ -2,13 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Reveal, { RevealGroup, RevealItem } from "@/components/shared/Reveal";
 import { postsRecentes } from "@/lib/content";
-
-const formatarData = (iso: string) =>
-  new Date(`${iso}T12:00:00`).toLocaleDateString("pt-BR", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+import { formatarData } from "@/lib/format";
 
 /** Do blog — os 3 posts mais recentes em cards horizontais (PRD §5.1, seção 7). */
 export default function BlogPreview() {
