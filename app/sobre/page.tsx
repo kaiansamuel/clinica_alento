@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: "Sobre nós",
   description:
     "Uma clínica que escuta — e responde. Conheça a história da Clínica Alento, de 2012 até a automação da jornada do paciente.",
+  openGraph: {
+    title: "Sobre nós · Clínica Alento",
+    description:
+      "Uma clínica que escuta — e responde. Conheça a história da Clínica Alento, de 2012 até a automação da jornada do paciente.",
+    images: [{ url: "/images/sobre-equipe.jpg" }],
+  },
 };
 
 export default function SobrePage() {

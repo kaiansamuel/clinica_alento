@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   title: "Contato",
   description:
     "Fale com a Clínica Alento pelo WhatsApp, telefone ou e-mail. Bot 24h — respondemos em até 2h dentro do horário de atendimento.",
+  openGraph: {
+    title: "Contato · Clínica Alento",
+    description:
+      "Fale com a Clínica Alento pelo WhatsApp, telefone ou e-mail. Bot 24h — respondemos em até 2h dentro do horário de atendimento.",
+    images: [{ url: "/images/sobre-fachada.jpg" }],
+  },
 };
 
 export default function ContatoPage() {

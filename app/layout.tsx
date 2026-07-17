@@ -26,12 +26,22 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://clinica-alento.vercel.app"),
   title: {
     default: "Clínica Alento — Cuidar bem começa em responder rápido",
     template: "%s · Clínica Alento",
   },
   description:
     "Clínica multiespecialidade em Goiânia. Agende pelo WhatsApp em menos de um minuto, a qualquer hora. 14 especialidades, resposta em até 40 segundos.",
+  openGraph: {
+    siteName: "Clínica Alento",
+    locale: "pt_BR",
+    type: "website",
+    title: "Clínica Alento — Cuidar bem começa em responder rápido",
+    description:
+      "Clínica multiespecialidade em Goiânia. Agende pelo WhatsApp em menos de um minuto, a qualquer hora.",
+    images: [{ url: "/images/hero-recepcao.jpg" }],
+  },
 };
 
 export default function RootLayout({

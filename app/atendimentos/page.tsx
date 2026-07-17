@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   title: "Atendimentos",
   description:
     "14 especialidades em um só lugar: da clínica geral aos exames de imagem. Agende pelo WhatsApp em menos de um minuto.",
+  openGraph: {
+    title: "Atendimentos · Clínica Alento",
+    description:
+      "14 especialidades em um só lugar: da clínica geral aos exames de imagem. Agende pelo WhatsApp em menos de um minuto.",
+    images: [{ url: "/images/atendimento-consulta.jpg" }],
+  },
 };
 
 /* Wordmarks fictícios dos convênios — PRD §5.3 (seção 4) */

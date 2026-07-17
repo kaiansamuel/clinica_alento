@@ -101,7 +101,7 @@ export default function Header() {
             aria-expanded={menuOpen}
             aria-controls="menu-mobile"
             aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-            className="inline-flex size-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-sage-100 lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full text-ink transition-colors hover:bg-sage-100 lg:hidden"
           >
             {menuOpen ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
           </button>
