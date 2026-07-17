@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta — PRD §2.3 */
+  --color-porcelain: #faf7f2;
+  --color-linen: #f1ece3;
+  --color-sage-100: #e3efe8;
+  --color-sage-600: #4e8a6c;
+  --color-sage-700: #3c6e55;
+  --color-apricot: #e8a87c;
+  --color-ink: #233029;
+  --color-ink-muted: #66746c;
+  --color-line: #e2dcd1;
+
+  /* Tipografia — PRD §2.4 (variáveis definidas via next/font em layout.tsx) */
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
+
+  /* Easing padrão dos reveals — PRD §2.7 */
+  --ease-care: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-porcelain);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-sage-100);
+    color: var(--color-sage-700);
+  }
+
+  /* Foco visível customizado — PRD §6 */
+  :focus-visible {
+    outline: 2px solid var(--color-sage-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Marquee de especialidades — PRD §2.7: ~40s/ciclo, pausa on-hover,
+   desliga com prefers-reduced-motion. Anima só transform. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-track--reverse {
+  animation-direction: reverse;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
